@@ -1,8 +1,8 @@
 object pepita {
 	var energia = 100
 	
-	method comer(comida) {
-		energia = energia + comida.energiaQueAporta()
+	method comer(alimento) {
+		energia = energia + alimento.energiaQueAporta()
 	}
 	
 	method volar(distancia) {
@@ -12,6 +12,7 @@ object pepita {
 	method energia() {
 		return energia
 	}
+	
 }
 
 object alpiste {
@@ -40,4 +41,19 @@ object manzana {
 		return base * madurez
 	}
 	
+}
+
+object pepon {
+	var energia = 30
+
+	method energia() {
+		return energia
+	}
+	method comer(alimento) {
+		energia = energia + alimento.energiaQueAporta() * 0.5
+	}
+
+	method volar(distancia) {
+		energia = energia - 20 - distancia * 2
+	}
 }
