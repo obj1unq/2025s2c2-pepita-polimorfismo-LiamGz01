@@ -64,16 +64,23 @@ object pepon {
 
 object roque {
   var ave = pepita
+  var cenas = 0 
 
   method ave(_ave) {
 	ave = _ave
+	cenas = 0
   }
 
   method alimentar(alimento) {
+	cenas = cenas + 1
 	return ave.comer(alimento)
   }
 
   method ave() {
 	return ave
+  }
+
+  method cenas() {
+	return cenas
   }
 }
